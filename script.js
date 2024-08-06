@@ -23,11 +23,21 @@ function getComputerChoice()
     return Action;
 }
 console.log(getComputerChoice(3));
-function getplayerchoice(){
 
+function getPlayerChoice() {
+
+  Rock1.addEventListener('click', () => {
+      playGame("Rock");
+  });
+
+  Paper1.addEventListener('click', () => {
+      playGame("Paper");
+  });
+
+  Scissor2.addEventListener('click', () => {
+      playGame("Scissor");
+  });
 }
-
-
 
 function Game(){
   if  (getComputerChoice===getplayerchoice){
