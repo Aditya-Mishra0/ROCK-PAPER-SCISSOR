@@ -1,5 +1,9 @@
 console.log("hello world");
 
+const Rock1 = document.querySelector('#Rock');
+const Paper1 = document.querySelector('#Paper');
+const Scissor2 = document.querySelector('#Scissor');
+
 function getComputerChoice()
 {
     const Action = Math.floor(Math.random()*3);
