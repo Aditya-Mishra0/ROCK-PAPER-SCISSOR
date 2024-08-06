@@ -1,11 +1,9 @@
 console.log("hello world");
 
-// Get DOM elements for Rock, Paper, and Scissors
 const Rock1 = document.querySelector('#Rock');
 const Paper1 = document.querySelector('#Paper');
 const Scissor2 = document.querySelector('#Scissor');
 
-// Function to get computer's choice
 function getComputerChoice() {
     const Action = Math.floor(Math.random() * 3);
 
@@ -24,7 +22,6 @@ function getComputerChoice() {
 
 console.log(getComputerChoice());
 
-// Function to get player's choice
 function getPlayerChoice() {
     Rock1.addEventListener('click', () => {
         playGame("Rock");
@@ -39,7 +36,6 @@ function getPlayerChoice() {
     });
 }
 
-// Initialize player choice event listeners
 getPlayerChoice();
 
 function playGame(playerChoice) {
