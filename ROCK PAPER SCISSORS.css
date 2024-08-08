@@ -1,20 +1,58 @@
 #Heading{
+    background-color: salmon;
     text-align: center;
     font-size: 100px;
+    margin: 0;
+    padding: 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 }
 #body{
-    background-color: yellow;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    background-image: url("stars.webp")
 
 }
+.result{
+    font-size: 35px;
+    color: chartreuse;
+    
+}
 .button{
+    background-size: cover;
+    background-position: center;
+    border: none;
     background-color: transparent;
-  width: 25%;
-  height: 25%;
+  width: 30%;
+  height: 30%;
   line-height: 200px;
   text-align: center ;
   align-items: center;
     margin: 20px;
     cursor: pointer;
-    
+    font-size: 20px;
+    padding: 40px;
+
+   
+}
+
+#RESULT{
+    text-align: center;
+    background-color: blueviolet;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+#Rock{
+    background-position: 0px -60px;
+    background-image: url("Dwayne__The_Rock__Johnson_Visits_the_Pentagon_\(41\)_\(cropped\).webp");
+
+}
+#Paper{
+    background-image: url("toilet-paper-1338433_640.webp");
+
+}
+#Scissors{
+   background-image: url("Classic-Scissoring.webp");
+
 }
