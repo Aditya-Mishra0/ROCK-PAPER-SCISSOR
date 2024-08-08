@@ -48,7 +48,8 @@ function playRound(playerChoice) {
     humanScoreSpan.textContent = humanScore;
     computerScoreSpan.textContent = computerScore;
 
-    resultDiv.textContent = `Result: ${resultMessage} (Player chose ${playerChoice}, Computer chose ${computerChoice})`;
+    resultDiv.textContent = `Result: ${resultMessage} 
+    (You chose ${playerChoice}, Computer chose ${computerChoice})`;
 }
 
 function getPlayerChoice() {
