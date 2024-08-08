@@ -2,61 +2,52 @@ console.log("hello world");
 
 const Rock1 = document.querySelector('#Rock');
 const Paper1 = document.querySelector('#Paper');
-const Scissor2 = document.querySelector('#Scissor');
+const Scissor2 = document.querySelector('#Scissors');
 
-function getComputerChoice()
-{
-    const Action = Math.floor(Math.random()*3);
+function getComputerChoice() {
+    const Action = Math.floor(Math.random() * 3);
 
-    switch(Action){
+    switch(Action) {
         case 0:
-        console.log("Rock");
-        break;
+            return "Rock";
         case 1:
-            console.log("Scissor");
-            break;
-            case 2:
-                console.log("Paper");
-                break;
-
+            return "Scissor";
+        case 2:
+            return "Paper";
     }
-    return Action;
 }
-console.log(getComputerChoice(3));
+console.log(getComputerChoice());
 
+function playGame(playerChoice) {
+    const computerChoice = getComputerChoice();
+    console.log("Player choice:", playerChoice);
+    console.log("Computer choice:", computerChoice);
+
+    if (playerChoice === computerChoice) {
+        console.log("It's a tie");
+    } else if (
+        (playerChoice === "Rock" && computerChoice === "Scissor") ||
+        (playerChoice === "Paper" && computerChoice === "Rock") ||
+        (playerChoice === "Scissor" && computerChoice === "Paper")
+    ) {
+        console.log("Player wins");
+    } else {
+        console.log("Computer wins");
+    }
+}
 
 function getPlayerChoice() {
+    Rock1.addEventListener('click', () => {
+        playGame("Rock");
+    });
 
-  Rock1.addEventListener('click', () => {
-      playGame("Rock");
-  });
+    Paper1.addEventListener('click', () => {
+        playGame("Paper");
+    });
 
-  Paper1.addEventListener('click', () => {
-      playGame("Paper");
-  });
-
-  Scissor2.addEventListener('click', () => {
-      playGame("Scissor");
-  });
+    Scissor2.addEventListener('click', () => {
+        playGame("Scissor");
+    });
 }
-getPlayerChoice();  
-
-console.log(getPlayerChoice);
-
-function Game(){
-  if  (getComputerChoice===getplayerchoice){
-    console.log("It's a tie");
-  }
-  else if  (
-    (getComputerChoice ==="Rock" && getplayerchoice ==="Paper")
-    (getComputerChoice === "Paper" && getplayerchoice === "Scissor")
-    (getComputerChoice === "Scissor" && getplayerchoice === "Rock")
-  ){
-    console.log("Player wins");
-  }
-else
-{
-console.log("Computer wins");
-}
-}
+getPlayerChoice();
 
