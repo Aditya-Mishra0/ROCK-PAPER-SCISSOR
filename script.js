@@ -3,6 +3,12 @@ console.log("hello world");
 const Rock1 = document.querySelector('#Rock');
 const Paper1 = document.querySelector('#Paper');
 const Scissor2 = document.querySelector('#Scissors');
+const resultDiv = document.querySelector('#RESULT');
+const humanScoreSpan = document.querySelector('#humanScore');
+const computerScoreSpan = document.querySelector('#computerScore');
+
+let humanScore = 0;
+let computerScore = 0;
 
 function getComputerChoice() {
     const Action = Math.floor(Math.random() * 3);
@@ -16,24 +22,33 @@ function getComputerChoice() {
             return "Paper";
     }
 }
-console.log(getComputerChoice());
 
 function playRound(playerChoice) {
     const computerChoice = getComputerChoice();
     console.log("Player choice:", playerChoice);
     console.log("Computer choice:", computerChoice);
 
+    let resultMessage = '';
+
     if (playerChoice === computerChoice) {
-        console.log("It's a tie");
+        resultMessage = "It's a tie!";
     } else if (
         (playerChoice === "Rock" && computerChoice === "Scissor") ||
         (playerChoice === "Paper" && computerChoice === "Rock") ||
         (playerChoice === "Scissor" && computerChoice === "Paper")
     ) {
-        console.log("Player wins");
+        resultMessage = "Player wins!";
+        humanScore++;
     } else {
-        console.log("Computer wins");
+        resultMessage = "Computer wins!";
+        computerScore++;
     }
+
+  
+    humanScoreSpan.textContent = humanScore;
+    computerScoreSpan.textContent = computerScore;
+
+    resultDiv.textContent = `Result: ${resultMessage} (Player chose ${playerChoice}, Computer chose ${computerChoice})`;
 }
 
 function getPlayerChoice() {
