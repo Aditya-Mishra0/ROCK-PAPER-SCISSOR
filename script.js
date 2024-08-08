@@ -18,7 +18,7 @@ function getComputerChoice() {
 }
 console.log(getComputerChoice());
 
-function playGame(playerChoice) {
+function playRound(playerChoice) {
     const computerChoice = getComputerChoice();
     console.log("Player choice:", playerChoice);
     console.log("Computer choice:", computerChoice);
@@ -38,15 +38,15 @@ function playGame(playerChoice) {
 
 function getPlayerChoice() {
     Rock1.addEventListener('click', () => {
-        playGame("Rock");
+        playRound("Rock");
     });
 
     Paper1.addEventListener('click', () => {
-        playGame("Paper");
+        playRound("Paper");
     });
 
     Scissor2.addEventListener('click', () => {
-        playGame("Scissor");
+        playRound("Scissor");
     });
 }
 getPlayerChoice();
