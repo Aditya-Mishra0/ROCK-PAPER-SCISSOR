@@ -37,7 +37,7 @@ function playRound(playerChoice) {
         (playerChoice === "Paper" && computerChoice === "Rock") ||
         (playerChoice === "Scissor" && computerChoice === "Paper")
     ) {
-        resultMessage = "Player wins!";
+        resultMessage = "You win!";
         humanScore++;
     } else {
         resultMessage = "Computer wins!";
@@ -48,8 +48,7 @@ function playRound(playerChoice) {
     humanScoreSpan.textContent = humanScore;
     computerScoreSpan.textContent = computerScore;
 
-    resultDiv.textContent = `Result: ${resultMessage} 
-    (You chose ${playerChoice}, Computer chose ${computerChoice})`;
+    resultDiv.textContent = `Result: ${resultMessage}  (You chose ${playerChoice}, Computer chose ${computerChoice})`;
 }
 
 function getPlayerChoice() {
