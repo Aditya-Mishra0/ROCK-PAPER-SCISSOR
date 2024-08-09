@@ -1,18 +1,27 @@
 #Heading{
     background-color: salmon;
     text-align: center;
-    font-size: 100px;
+    font-size: 70px;
     margin: 0;
-    padding: 15px;
+    padding: 5px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 }
+.display{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    color: aqua;
+    text-align: center;
+    margin: 10px;
+}
 #body{
+    background-image: url("stars.webp");
     background-size: cover;
     background-position: center;
     margin: 0;
-    background-image: url("stars.webp")
-
+    max-width: 100%;
+    height: auto;
+    
 }
 .result{
     font-size: 35px;
@@ -25,8 +34,8 @@
     border: none;
     background-color: transparent;
   width: 30%;
-  height: 30%;
-  line-height: 200px;
+  height: 20%;
+  line-height: 180px;
   text-align: center ;
   align-items: center;
     margin: 20px;
@@ -37,7 +46,7 @@
    
 }
 
-#RESULT{
+#RESULT{    
     text-align: center;
     background-color: blueviolet;
     font-family: 'Times New Roman', Times, serif;
@@ -53,6 +62,6 @@
 
 }
 #Scissors{
-   background-image: url("scissors.webp");
+   background-image: url("Classic-Scissoring.webp");
 
 }
